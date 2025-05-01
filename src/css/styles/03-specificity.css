@@ -1,0 +1,38 @@
+/* 상속, 겹침, 우선순위 */
+/* 상속 */
+.wrapper {
+  color: green;
+  border: 1px dotted blue;
+}
+
+/* #container p {
+  color: teal;
+} */
+
+.wrapper {
+  border: inherit;
+}
+
+p.ai {
+  color: purple;
+}
+.ai.copilot {
+  color: red;
+}
+
+p {
+  color: grey;
+}
+p {
+  color: orange;
+}
+p {
+  color: pink !important;
+}
+
+/* 겹침 (상속) */
+body {
+  color: red;
+}
+
+/* 겹침, 우선순위 (선택자) */
