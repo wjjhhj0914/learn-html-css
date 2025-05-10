@@ -21,9 +21,8 @@
     <h2>컴포넌트 마크업</h2>
     <div class="component-wrapper">
       <!-- 입력 서식 컴포넌트 -->
-      <!-- <div class="form-input"><label for="formInput-0">레이블</label><input type="text" id="formInput-0" name="form-name" required placeholder="플레이스홀더" /></div> -->
-      <div class="form-input"><label for="formInput-0">아이디</label><input type="text" id="formInput-0" name="form-name" required placeholder="euid@euid.de" /></div>
-      <hr />
+      <div class="form-input"><label for="formInput-0">레이블</label><input type="text" id="formInput-0" name="form-name" required placeholder="플레이스홀더" /></div>
+
       <!-- 버튼 컴포넌트 (스타일 관점으로 네이밍) -->
       <input class="outline-button" type="button" value="버튼텍스트" />
       <button class="fill-button" type="button">버튼텍스트</button>
@@ -32,6 +31,30 @@
         <span class="fa-solid fa-chevron-right"></span>
         <a href="/">링크텍스트</a>
       </div>
+    </div>
+    <hr />
+    <h2>웹 카페 로그인 폼</h2>
+    <div class="webcafe-login">
+      <h3 class="headline">로그인</h3>
+      <form action="/" method="GET">
+        <div class="form-input"><label for="formInput-1">아이디</label><input type="email" id="formInput-1" name="userEmail" required placeholder="euid@likelion.net" /></div>
+        <div class="form-input"><label for="formInput-2">비밀번호</label><input type="password" id="formInput-2" name="userPassword" required placeholder="8자리 이상" minlength="8" /></div>
+        <button class="fill-button" type="submit">로그인</button>
+      </form>
+      <ul>
+        <li>
+          <div class="icon-link">
+            <span class="fa-solid fa-chevron-right"></span>
+            <a href="/">회원가입</a>
+          </div>
+        </li>
+        <li>
+          <div class="icon-link">
+            <span class="fa-solid fa-chevron-right"></span>
+            <a href="/">아이디 비밀번호 찾기</a>
+          </div>
+        </li>
+      </ul>
     </div>
   </body>
 </html>
