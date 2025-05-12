@@ -1,0 +1,41 @@
+body {
+  margin: 50px;
+}
+
+.notification {
+  border: 1px solid #9b9a90;
+  border-radius: 0.5rem;
+  padding: 20px;
+  display: flex;
+  flex-flow: row nowrap;
+  column-gap: 20px;
+  align-items: center;
+  min-inline-size: 260px;
+
+  svg {
+    flex-shrink: 0;
+  }
+
+  > div {
+    flex-grow: 1;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    row-gap: 4px;
+  }
+
+  strong {
+    color: #22be61;
+    font-size: 1.125rem;
+  }
+
+  time {
+    color: #22be61;
+    font-size: 11px;
+  }
+
+  p {
+    color: #9b9a90;
+    inline-size: 100%;
+  }
+}
