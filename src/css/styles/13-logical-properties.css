@@ -1,0 +1,36 @@
+/* CSS 논리 속성 및 논리 값 */
+body {
+  margin: 50px;
+}
+
+/* inline-size & block-size */
+.lion {
+  writing-mode: horizontal-tb;
+  background: var(--yellow);
+  inline-size: 500px; /* width의 논리 속성 */
+  block-size: 300px; /* height의 논리 속성 */
+}
+
+/* inset */
+.like {
+  background: var(--blue);
+  position: fixed; /* 뷰포트 기준 */
+  top: 20px;
+  right: 20px;
+  /* inset-block-start: 40px;
+  inset-inline-end: 40px; */
+  inset: 80px 80px auto auto;
+}
+
+/*  inline-start, inline-end, start, end */
+.bootcamp {
+  background: var(--green);
+  text-align: end;
+
+  span {
+    background: var(--coral);
+    /* float: left; 부모 상자 안에서 left 혹은 right */
+    float: inline-start; /* float: left; 의 논리 속성 */
+    /* float: inline-end; float: right;의 논리 속성 */
+  }
+}
