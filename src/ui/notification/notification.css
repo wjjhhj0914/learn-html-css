@@ -1,16 +1,27 @@
+@property --point-color {
+  syntax: '<color>';
+  inherits: true;
+  initial-value: #22be61;
+}
+
 body {
   margin: 50px;
 }
 
+/* 알림 Notification 컴포넌트 */
 .notification {
-  border: 1px solid #9b9a90;
+  --base-color: #9b9a90;
+  --size: 260px;
+
+  border: 1px solid var(--base-color, #9b9a90);
   border-radius: 0.5rem;
   padding: 20px;
   display: flex;
   flex-flow: row nowrap;
   column-gap: 20px;
   align-items: center;
-  min-inline-size: 260px;
+  min-inline-size: var(--size);
+  color: var(--point-color);
 
   svg {
     flex-shrink: 0;
@@ -25,17 +36,76 @@ body {
   }
 
   strong {
-    color: #22be61;
     font-size: 1.125rem;
   }
 
   time {
-    color: #22be61;
     font-size: 11px;
   }
 
   p {
-    color: #9b9a90;
+    color: var(--base-color, #9b9a90);
     inline-size: 100%;
   }
 }
+
+/* 알림 Notification 리스트 */
+.notification-list {
+  --gap: 20px;
+
+  display: flex;
+  flex-flow: row wrap;
+  gap: var(--gap);
+
+  li {
+    display: contents;
+  }
+
+  .notification {
+    width: 100%;
+
+    @media (width >= 600px) {
+      width: calc(50% - var(--gap) / 2);
+    }
+
+    @media (width >= 1280px) {
+      width: calc(25% - var(--gap) * 3 / 4);
+    }
+  }
+}
+
+/* @media (width > 600px) {
+  .notification-list {
+    display: flex;
+    flex-flow: row nowrap;
+    column-gap: 10px;
+    justify-content: space-between;
+  }
+
+  .notification {
+    margin: 20px;
+  }
+}
+
+@media (width < 1024px) {
+  .notification-list {
+    display: flex;
+    flex-flow: row wrap;
+
+    .notification {
+      flex-grow: 1;
+      margin: 20px;
+    }
+  }
+}
+
+@media (width > 1025px) {
+  .notification-list {
+    display: flex;
+    flex-flow: row wrap;
+  }
+
+  .notification {
+    width: 100%;
+  }
+} */
