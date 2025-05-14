@@ -3,6 +3,8 @@
   --green-200: #1bf008;
   --green-300: #03cca8;
 
+  --blue-100: #e9f0fd;
+
   --gray-100: #bcc3c7;
   --gray-200: #9b9a90;
   --gray-300: #6d7478;
@@ -24,7 +26,7 @@
 
 /* 로고(SVG) */
 .logo {
-  --size: 230px;
+  --size: clamp(164px, 71.3%, 230px);
 
   display: inline-flex;
   inline-size: var(--size);
@@ -207,19 +209,14 @@
   }
 
   .logo {
-    --size: 164px;
-
     margin-inline: auto;
     margin-block-start: 70px;
     margin-block-end: 45px;
     display: flex;
 
-    @media (max-width: 768px) {
-      --size: 230px;
-
+    @media (max-width <= 768px) {
       margin-block-start: 100px;
       margin-block-end: 50px;
-      /* inline-size: clamp(164px, 71.3%, 230px); */
     }
   }
 
@@ -236,6 +233,7 @@
       order: 1;
       display: flex;
       flex-flow: row nowrap;
+      column-gap: 6px;
       align-items: center;
 
       .textlink-new {
@@ -255,5 +253,25 @@
     .button {
       block-size: 52px;
     }
+  }
+
+  /* 상태 디자인 */
+  :focus {
+    outline: none;
+  }
+
+  .form-input input:focus-visible {
+    border: 1px solid var(--green-100);
+    background: var(--blue-100);
+  }
+
+  .button:focus-visible {
+    box-shadow: 0 0 1px 2px #f00;
+  }
+
+  .checkbox-wrapper *:focus-visible {
+    outline: 2px solid var(--green-100);
+    outline-offset: 2px;
+    border-radius: 2px;
   }
 }
