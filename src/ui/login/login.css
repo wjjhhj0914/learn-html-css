@@ -196,3 +196,64 @@
     color: var(--text-color);
   }
 }
+
+/* 네이버 로그인 폼 스타일링 */
+.login-container {
+  padding-inline: 1.25rem;
+
+  @media (min-width: 768px) {
+    inline-size: 500px;
+    margin-inline: auto;
+  }
+
+  .logo {
+    --size: 164px;
+
+    margin-inline: auto;
+    margin-block-start: 70px;
+    margin-block-end: 45px;
+    display: flex;
+
+    @media (max-width: 768px) {
+      --size: 230px;
+
+      margin-block-start: 100px;
+      margin-block-end: 50px;
+      /* inline-size: clamp(164px, 71.3%, 230px); */
+    }
+  }
+
+  .login-form {
+    display: flex;
+    flex-flow: column nowrap;
+    row-gap: 10px;
+
+    .form-input input {
+      block-size: 3rem;
+    }
+
+    .checkbox-wrapper {
+      order: 1;
+      display: flex;
+      flex-flow: row nowrap;
+      align-items: center;
+
+      .textlink-new {
+        margin-inline-start: auto;
+      }
+
+      @media (max-width: 768px) {
+        justify-content: end;
+
+        .textlink-new,
+        .form-switch {
+          display: none;
+        }
+      }
+    }
+
+    .button {
+      block-size: 52px;
+    }
+  }
+}
