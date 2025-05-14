@@ -114,5 +114,61 @@
 }
 
 /* 텍스트 링크 */
+.textlink-new {
+  font-weight: 700;
+}
+
 /* 스위치 */
+.form-switch {
+  --accent-color: var(--green-100);
+  --size: 1rem;
+  display: inline-flex;
+  flex-flow: row nowrap;
+  position: relative;
+
+  input {
+    position: absolute;
+    inset-block-start: 0;
+    inset-block-end: 0;
+    inset-inline-start: 0;
+    margin: 0;
+    inline-size: calc(var(--size) * 2);
+    block-size: var(--size);
+    appearance: none;
+  }
+
+  label {
+    inline-size: calc(var(--size) * 2);
+    text-align: right;
+    align-content: center;
+  }
+
+  input:checked + label::before {
+    content: 'on';
+    color: var(--accent-color);
+  }
+
+  label::before {
+    content: 'off';
+    text-transform: uppercase;
+    color: var(--gray-200);
+    font-weight: 700;
+    size: var(--size);
+  }
+}
+
 /* 버튼 */
+.button {
+  --fill-color: var(--green-100);
+  --text-color: var(--white);
+
+  border: 0;
+  inline-size: 100%;
+  padding: 0.5em;
+  border-radius: 4px;
+
+  &.button-fill {
+    background: var(--fill-color);
+    color: var(--text-color);
+  }
+}
