@@ -1,0 +1,33 @@
+/* keyframes 애니메이션 */
+
+body {
+  margin: 50px;
+}
+
+/* 키프레임 규칙 */
+@keyframes zoom {
+  from {
+    width: 100px;
+    background: yellow;
+  }
+  to {
+    width: 200px;
+    background: pink;
+  }
+}
+
+.like {
+  border: 5px solid currentColor;
+  padding: 10px;
+  width: 100px;
+  /* animation-name: zoom;
+  animation-duration: 5s;
+  animation-iteration-count: 3;
+  animation-direction: alternate;
+  animation-timing-function: ease-in-out;
+  animation-delay: 1s;
+  animation-fill-mode: forwards;
+  animation-play-state: paused; */
+  animation: zoom 5s 1s 3 alternate ease-in-out forwards running;
+  /* 위의 속성과 동일한 효과 */
+}

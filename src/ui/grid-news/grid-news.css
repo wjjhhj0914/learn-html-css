@@ -6,7 +6,7 @@ body {
 
 .news {
   margin-block: 20px;
-  background: #24388d;
+  background: var(--dark-blue) radial-gradient(circle at right top, rgb(48, 48, 224), rgb(17, 17, 102));
   padding: 20px;
   min-inline-size: 320px;
   display: grid;
