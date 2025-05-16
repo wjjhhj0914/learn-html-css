@@ -2,6 +2,8 @@
 
 body {
   margin: 50px;
+  background: #121212;
+  color: var(--white);
 }
 
 /* 키프레임 규칙 */
@@ -16,6 +18,7 @@ body {
   }
 }
 
+/* 애니메이션 속성 학습을 위한 예제 */
 .like {
   border: 5px solid currentColor;
   padding: 10px;
@@ -28,6 +31,24 @@ body {
   animation-delay: 1s;
   animation-fill-mode: forwards;
   animation-play-state: paused; */
-  animation: zoom 5s 1s 3 alternate ease-in-out forwards running;
+  animation: zoom 5s 1s 3 alternate ease-in-out forwards paused;
   /* 위의 속성과 동일한 효과 */
+}
+
+/* 공통 스타일 (.case) */
+.case .target-animation {
+  border-radius: 0.5rem;
+  padding: 1rem;
+  font-size: 1.5rem;
+  font-weight: 700;
+  background: var(--dark-blue);
+  color: var(--white);
+  text-align: center;
+  margin-block: 15px;
+}
+
+/* Fade 애니메이션 */
+.fade .target-animation {
+  animation: fade 2s infinite linear alternate;
+  animation-play-state: paused;
 }
