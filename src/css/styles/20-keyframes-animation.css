@@ -52,3 +52,21 @@ body {
   animation: fade 2s infinite linear alternate;
   animation-play-state: paused;
 }
+
+/* Shrink 애니메이션 */
+.shrink .target-animation {
+  animation: shrink 2s infinite ease-in-out alternate;
+  animation-play-state: paused;
+}
+
+/* Bounce 애니메이션 */
+.bounce .target-animation {
+  animation: bounce 2s infinite ease-in-out alternate;
+  animation-play-state: paused;
+}
+
+/* Shake 애니메이션 */
+.shake .target-animation {
+  animation: shake 2s infinite ease-in-out alternate;
+  animation-play-state: running;
+}

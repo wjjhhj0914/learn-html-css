@@ -8,3 +8,35 @@
     opacity: 0;
   }
 }
+
+/* Shrink 애니메이션 */
+/* 크기를 조절하는 애니메이션은 성능 저하 유발 가능성 있음 */
+@keyframes shrink {
+  0% {
+    inline-size: 100%;
+  }
+  100% {
+    inline-size: 50%;
+    font-size: 0.75rem;
+  }
+}
+
+/* Bounce 애니메이션 */
+@keyframes bounce {
+  0% {
+    translate: 0;
+  }
+  100% {
+    translate: 0 -20px;
+  }
+}
+
+/* Shake 애니메이션 */
+@keyframes shake {
+  0% {
+    translate: 0;
+  }
+  100% {
+    translate: -20px 0;
+  }
+}
