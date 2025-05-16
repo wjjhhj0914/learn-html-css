@@ -36,6 +36,11 @@ body {
 }
 
 /* 공통 스타일 (.case) */
+.container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+
 .case .target-animation {
   border-radius: 0.5rem;
   padding: 1rem;
@@ -69,4 +74,14 @@ body {
 .shake .target-animation {
   animation: shake 2s infinite ease-in-out alternate;
   animation-play-state: running;
+}
+
+/* Spin 애니메이션 */
+.spin .target-animation {
+  width: 120px;
+  aspect-ratio: 1;
+  background: conic-gradient(red 0% 25%, green 25% 50%, blue 50% 75%, purple 75% 100%);
+  border-radius: 50%;
+  animation: spin 8s infinite linear;
+  animation-play-state: paused;
 }

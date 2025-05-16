@@ -40,3 +40,13 @@
     translate: -20px 0;
   }
 }
+
+/* Spin 애니메이션 */
+@keyframes spin {
+  0% {
+    rotate: 0deg;
+  }
+  100% {
+    rotate: 360deg;
+  }
+}
