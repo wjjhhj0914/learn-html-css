@@ -225,7 +225,7 @@ body {
     .ipad-pro,
     .ipad-air,
     .iphone15-pro {
-      grid-column-end: span 2;
+      grid-column-end: span 2; /* 한 칸으로 차지하겠다!는 의미 */
     }
   }
 }
