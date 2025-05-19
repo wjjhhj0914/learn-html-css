@@ -1,0 +1,15 @@
+/* 라이트, 다크모드 */
+:root {
+  /* light-dark() 함수 사용을 위한 속성 선언 */
+  color-scheme: light dark;
+}
+
+body {
+  margin: 50px;
+  background: goldenrod;
+  color: light-dark(green, red);
+
+  @media (prefers-color-scheme: dark) {
+    background-color: teal;
+  }
+}
