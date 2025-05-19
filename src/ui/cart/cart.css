@@ -21,7 +21,6 @@ body {
   font-size: 1.5rem;
   letter-spacing: -0.02em;
   border-bottom: 2px solid currentColor;
-  color: green;
   padding-block-end: 6px;
 
   &:before {
@@ -128,12 +127,35 @@ body {
     }
   }
 }
+
+/* 카트 구매 총액 컴포넌트 */
+.cart-footer {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: end;
+  align-items: end;
+  font-weight: bold;
+  font-size: 20px;
+  letter-spacing: -0.02em;
+  line-height: 1;
+  padding-top: 20px;
+  border-top: 2px solid currentColor;
+
+  [aria-hidden='true'] {
+    margin-inline: 0.125em;
+  }
+}
+
 /* 장바구니 레이아웃 */
 .cart {
-  background: url(/src/assets/cart/cart.png) no-repeat 0 0 / cover;
+  /* background: url(/src/assets/cart/cart.png) no-repeat 0 0 / cover;
   inline-size: 712px;
-  padding: 26px;
+  padding: 26px; */
   display: flex;
   flex-flow: column nowrap;
   row-gap: 20px;
+  border: 6px solid currentColor;
+  color: var(--gray-500);
+  border-radius: 8px;
+  padding: 20px;
 }
