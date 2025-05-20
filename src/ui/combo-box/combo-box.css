@@ -1,0 +1,76 @@
+body {
+  margin: 50px;
+}
+
+/* 콤보 박스 */
+.combo-box {
+  background: yellow;
+  display: inline-grid;
+  grid-auto-flow: column;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 12px;
+  border-radius: 2px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+
+  &:focus-within {
+    border-color: #0078d4;
+  }
+
+  select {
+    appearance: none;
+    background: transparent;
+    border: none;
+    background: #fff;
+    font-size: 14px;
+    padding-right: 16px;
+    cursor: pointer;
+  }
+}
+
+.combo-box {
+  display: inline-grid;
+  grid-template-columns: auto;
+  align-items: center;
+  padding: 4px 12px;
+  border: 1px solid gray;
+  border-radius: 4px;
+  background: yellow;
+
+  isolation: isolate;
+
+  &:focus-within {
+    box-shadow: 0 0 0 2px green;
+  }
+
+  .global,
+  .arrow {
+    /* z-index: -1; */
+    pointer-events: none;
+  }
+
+  .global,
+  .form-combo,
+  .arrow {
+    grid-area: 1 / 1 / 2 / 2;
+  }
+
+  .global {
+    justify-self: start;
+  }
+
+  .form-combo {
+    select {
+      outline: 0 none;
+      appearance: none;
+      border: 0;
+      background: transparent;
+      padding: 4px 20px;
+    }
+  }
+
+  .arrow {
+    justify-self: end;
+  }
+}
