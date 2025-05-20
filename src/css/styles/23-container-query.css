@@ -4,7 +4,7 @@ body {
   margin: 50px;
 }
 
-.range-control {
+/* .range-control {
   margin-bottom: 20px;
 }
 
@@ -30,7 +30,6 @@ body {
       block-size: 200px;
       text-align: center;
       align-content: center;
-      /* font-size: 2em; */
       font-weight: 700;
     }
 
@@ -41,5 +40,51 @@ body {
     .lion {
       background: orange;
     }
+  }
+} */
+
+.card-wrapper {
+  container-type: inline-size;
+
+  .card {
+    background: #f9f9f9;
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 20px;
+    padding: 20px;
+    border: 1px solid gray;
+
+    @container (width >=480px) {
+      flex-direction: row;
+    }
+
+    img {
+      inline-size: 100%;
+      aspect-ratio: 3/2;
+      object-fit: cover;
+    }
+
+    figcaption {
+      text-align: center;
+      font-style: italic;
+      margin-block-start: 8px;
+      font-weight: 600;
+    }
+
+    p {
+      line-height: 1.5;
+      text-align: justify;
+      color: gray;
+    }
+  }
+}
+
+/* 그리드 레이아웃 */
+.grid-wrapper {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+
+  .card-wrapper:nth-child(n + 5) {
+    grid-column: span 2;
   }
 }
