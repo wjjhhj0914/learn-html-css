@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>컨테이너 쿼리</title>
+    <link rel="shortcut icon" href="/public/favicon/likelion.ico" type="image/x-icon" />
+    <link rel="icon" href="/public/favicon/likelion.svg" type="image/svg" />
+    <link rel="preload" as="font" href="/public/font/suit/SUIT-Variable.woff2" />
+    <link rel="stylesheet" href="/public/font/suit/SUIT-Variable.css" />
+    <link rel="stylesheet" href="/src/common/index.css" />
+    <link rel="stylesheet" href="/src/css/styles/23-container-query.css" />
+  </head>
+  <body>
+    <a href="/index.html">메인 페이지 이동</a>
+    <br />
+    <h1>컨테이너 쿼리</h1>
+    <hr />
+    <div class="range-control">
+      <label for="size-control">너비 조절: <span id="size-value">621</span>px</label>
+      <input type="range" id="size-control" min="300" max="1200" value="621" step="1" />
+    </div>
+    <div class="wrapper">
+      <div class="bootcamp">
+        <div class="like">멋쟁이 사자처럼</div>
+        <div class="lion">프론트엔드 부트캠프</div>
+      </div>
+    </div>
+    <script>
+      const sizeControl = document.getElementById('size-control');
+      const sizeValue = document.getElementById('size-value');
+      const wrapper = document.querySelector('.wrapper');
+
+      // 초기값 설정
+      sizeValue.textContent = sizeControl.value;
+      wrapper.style.inlineSize = `${sizeControl.value}px`;
+
+      // 슬라이더 이벤트 리스너
+      sizeControl.addEventListener('input', function () {
+        const newSize = this.value;
+        wrapper.style.inlineSize = `${newSize}px`;
+        sizeValue.textContent = newSize;
+      });
+    </script>
+  </body>
+</html>

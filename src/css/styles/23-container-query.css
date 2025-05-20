@@ -1,0 +1,45 @@
+/* Container Query */
+
+body {
+  margin: 50px;
+}
+
+.range-control {
+  margin-bottom: 20px;
+}
+
+.wrapper {
+  border: 1px solid red;
+  padding: 10px;
+  container-type: inline-size;
+
+  .bootcamp {
+    display: flex;
+    flex-flow: column nowrap;
+
+    @container (width >= 600px) {
+      flex-direction: row;
+
+      div {
+        font-size: 2em;
+        color: white;
+      }
+    }
+
+    div {
+      block-size: 200px;
+      text-align: center;
+      align-content: center;
+      /* font-size: 2em; */
+      font-weight: 700;
+    }
+
+    .like {
+      background: green;
+    }
+
+    .lion {
+      background: orange;
+    }
+  }
+}
